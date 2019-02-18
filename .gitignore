@@ -8,6 +8,7 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+.DS_Store
 .Python
 build/
 develop-eggs/
@@ -33,8 +34,6 @@ MANIFEST
 *.spec
 
 # Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
 
 # Unit test / coverage reports
 htmlcov/
