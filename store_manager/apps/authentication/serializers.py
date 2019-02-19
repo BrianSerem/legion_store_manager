@@ -3,8 +3,7 @@ from rest_framework.validators import UniqueValidator
 from django.contrib.auth import authenticate
 from django.contrib.auth.tokens import default_token_generator
 
-from .models import User
-
+from .models import User 
 
 
 class RegistrationSerializer(serializers.ModelSerializer):
@@ -113,5 +112,9 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('email', 'username', 'role', 'password')
+
+
+    
+      
 
 
