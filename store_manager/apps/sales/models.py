@@ -15,6 +15,6 @@ class TimeStamped(models.Model):
         abstract = True
 
 class Sale(TimeStamped):
-	"""This class defines a sale instance"""
+    """This class defines a sale instance"""
     attendant = models.ForeignKey(settings.AUTH_USER_MODEL,
-                                  on_delete=models.CASCADE)
+    on_delete=models.CASCADE)
