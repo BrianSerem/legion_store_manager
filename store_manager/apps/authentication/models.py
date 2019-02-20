@@ -4,13 +4,15 @@ from django.conf import settings
 from django.db import models
 
 
-class User():
+class User:
   
     username = models.CharField(db_index=True, max_length=255, unique=True)
     email = models.EmailField(db_index=True, unique=True)
     role = models.EmailField(db_index=True, unique=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    objects = models.Manager()
 
     
 
