@@ -1,7 +1,11 @@
 {
     "_meta": {
         "hash": {
+<<<<<<< HEAD
             "sha256": "d1161eac92b891ea30797c99b944d9afb08caaa7ea8a8330e5b7d326596e724b"
+=======
+            "sha256": "ab532fe961faf0782865b34f6962ea930e178929733b8359241d0a50f7f0995a"
+>>>>>>> [Chore ] Added sales app.
         },
         "pipfile-spec": 6,
         "requires": {
@@ -39,6 +43,13 @@
             ],
             "index": "pypi",
             "version": "==3.3"
+        },
+        "factoryboy": {
+            "hashes": [
+                "sha256:1f273f30ad23f1caff9e1e8e03841c998e7e035775ec3e7160cd4afac3981550"
+            ],
+            "index": "pypi",
+            "version": "==0.1.1"
         },
         "pyjwt": {
             "hashes": [

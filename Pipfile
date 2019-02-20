@@ -11,6 +11,7 @@ factory-boy = "*"
 django = "*"
 djangorestframework = "*"
 djangorestframework-simplejwt = "*"
+factoryboy = "*"
 
 [requires]
 python_version = "3.7"

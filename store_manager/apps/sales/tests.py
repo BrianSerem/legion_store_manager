@@ -1,4 +1,5 @@
 from django.test import TestCase
+<<<<<<< HEAD
 from django.utils.text import slugify
 
 from .factories import CategoryFactory, ProductFactory
@@ -46,3 +47,7 @@ class ProductQuerysetsTests(TestCase):
             Product.products.active(),
             [repr(product) for product in  Product.objects.filter(deleted=False)]
         )
+=======
+
+# Create your tests here.
+>>>>>>> [Chore ] Added sales app.
