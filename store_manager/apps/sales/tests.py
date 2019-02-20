@@ -1,8 +1,10 @@
 from django.test import TestCase
-<<<<<<< HEAD
 from django.utils.text import slugify
 
 from .factories import CategoryFactory, ProductFactory
+
+from .factories import (CategoryFactory, ProductFactory, SaleFactory,
+                        SaleItemFactory, UserFactory)
 from .models import Product
 
 class CategoryModelTests(TestCase):
@@ -47,7 +49,15 @@ class ProductQuerysetsTests(TestCase):
             Product.products.active(),
             [repr(product) for product in  Product.objects.filter(deleted=False)]
         )
-=======
 
-# Create your tests here.
->>>>>>> [Chore ] Added sales app.
+class SaleModelTests(TestCase):
+
+    def setUp(self):
+        self._category1 = CategoryFactory.create()
+        self._product1 = ProductFactory.create(category=self._category1)
+        self._user = UserFactory.create()
+        self._sale = SaleFactory.create(attendant=self._user)
+
+    def test_owner_can_add_attendant_to_sale(self):
+        sale_test = SaleFactory.create(attendant=self._user)
+        self.assertEqual(sale_test.attendant, self._user)
