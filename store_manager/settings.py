@@ -29,8 +29,11 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+LOCAL_APPS = [
+   "store_manager.apps.sales", 
+]
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -41,6 +44,10 @@ INSTALLED_APPS = [
     'store_manager.apps.authentication',
     'store_manager.apps.sales',
 ]
+
+THIRD_PARTY_APPS = []
+
+INSTALLED_APPS = LOCAL_APPS + DJANGO_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
