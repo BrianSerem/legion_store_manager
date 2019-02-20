@@ -2,7 +2,7 @@ import factory
 
 from django.conf import settings
 
-from .models import Product
+from .models import Category, Product
 
 
 class CategoryFactory(factory.DjangoModelFactory):
