@@ -4,8 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+<<<<<<< HEAD
 coverage = "*"
 factory-boy = "*"
+=======
+pylint = "*"
+>>>>>>> [chore #164071554] Modify pipfile
 
 [packages]
 django = "*"
