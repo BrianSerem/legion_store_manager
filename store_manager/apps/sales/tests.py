@@ -3,7 +3,7 @@ from django.utils.text import slugify
 
 from .models import Category, Product
 from .factories import CategoryFactory, ProductFactory
-
+from .models import Product
 
 class CategoryTestCase(TestCase):
     def test_add_category(self):
@@ -28,20 +28,19 @@ class ProductModelTests(TestCase):
         self.assertEqual(str(self._product1), self._product1.name)
 
 
-class ProductManager(TestCase):
-    
+class ProductQuerysetsTests(TestCase):
+
     def setUp(self):
         self._category1 = CategoryFactory.create()
 
-    def test_products_active_queryset(self):
+    def test_products_queryset_returns_active_products(self):
         product1 = ProductFactory.create(category=self._category1)
         product2 = ProductFactory.create(category=self._category1)
         product3 = ProductFactory.create(category=self._category1)
-
-        product2.deleted = False
+        product2.deleted = True
         product2.save()
 
         self.assertQuerysetEqual(
             Product.products.active(),
-            [repr(product) for product in Product.objects.filter(deleted=False)]
+            [repr(product) for product in  Product.objects.filter(deleted=False)]
         )
