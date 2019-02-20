@@ -30,7 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 LOCAL_APPS = [
-   "store_manager.apps.sales", 
+    "store_manager.apps.sales",
 ]
 
 DJANGO_APPS = [
