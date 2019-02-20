@@ -3,6 +3,9 @@ from django.utils.translation import ugettext_lazy as _
 from .managers import ProductQueryset
 
 
+from .managers import ProductQueryset
+
+
 class Category(models.Model):
     title = models.CharField(db_index=True, unique=True,max_length=200)
     description = models.CharField(blank=True,max_length=200)
@@ -25,6 +28,9 @@ class Product(models.Model):
     deleted = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    objects = models.Manager()
+    products = ProductQueryset.as_manager()
 
     class Meta:
         ordering = ("-name",)
