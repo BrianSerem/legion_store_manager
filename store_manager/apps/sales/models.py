@@ -45,7 +45,7 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
-        
+
 class TimeStamped(models.Model):
     """
     Creation time and update timestamps
@@ -59,4 +59,16 @@ class TimeStamped(models.Model):
 class Sale(TimeStamped):
     """This class defines a sale instance"""
     attendant = models.ForeignKey(settings.AUTH_USER_MODEL,
-                                on_delete=models.CASCADE)
+                                  on_delete=models.CASCADE)
+
+
+class SaleItem(models.Model):
+    sale = models.ForeignKey('Sale', related_name="sale_items",
+                            on_delete=models.CASCADE)
+    product = models.ForeignKey('Product', related_name="sale_items",
+                               on_delete=models.CASCADE)
+    product_title = models.CharField(_("Product Title"), max_length=255)
+    quantity = models.IntegerField(_("Quantity"))
+
+    def __str__(self):
+        return "Product: {}, Quantity: {}".format(self.product_title, self.quantity)
