@@ -1,8 +1,7 @@
 import factory
 from factory import DjangoModelFactory, Faker
 
-from .models import Category
-from .models import Product
+from .models import Category, Product
 
 
 class CategoryFactory(DjangoModelFactory):
