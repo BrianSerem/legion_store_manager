@@ -1,11 +1,8 @@
 {
     "_meta": {
         "hash": {
-<<<<<<< HEAD
-            "sha256": "d1161eac92b891ea30797c99b944d9afb08caaa7ea8a8330e5b7d326596e724b"
-=======
             "sha256": "ab532fe961faf0782865b34f6962ea930e178929733b8359241d0a50f7f0995a"
->>>>>>> [Chore ] Added sales app.
+
         },
         "pipfile-spec": 6,
         "requires": {
