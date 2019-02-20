@@ -41,6 +41,7 @@
             "index": "pypi",
             "version": "==3.3"
         },
+<<<<<<< HEAD
         "factoryboy": {
             "hashes": [
                 "sha256:1f273f30ad23f1caff9e1e8e03841c998e7e035775ec3e7160cd4afac3981550"
@@ -101,6 +102,8 @@
             "index": "pypi",
             "version": "==4.5.2"
         },
+=======
+>>>>>>> [chore #164071554] Fix dependency typo on pipfile
         "factory-boy": {
             "hashes": [
                 "sha256:6f25cc4761ac109efd503f096e2ad99421b1159f01a29dbb917359dcd68e08ca",
@@ -116,6 +119,16 @@
             ],
             "version": "==1.0.2"
         },
+<<<<<<< HEAD
+=======
+        "pyjwt": {
+            "hashes": [
+                "sha256:5c6eca3c2940464d106b99ba83b00c6add741c9becaec087fb7ccdefea71350e",
+                "sha256:8d59a976fb773f3e6a39c85636357c4f0e242707394cadadd9814f5cbaa20e96"
+            ],
+            "version": "==1.7.1"
+        },
+>>>>>>> [chore #164071554] Fix dependency typo on pipfile
         "python-dateutil": {
             "hashes": [
                 "sha256:7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493df2fb",
@@ -123,6 +136,16 @@
             ],
             "version": "==2.8.0"
         },
+<<<<<<< HEAD
+=======
+        "pytz": {
+            "hashes": [
+                "sha256:32b0891edff07e28efe91284ed9c31e123d84bea3fd98e1f72be2508f43ef8d9",
+                "sha256:d5f05e487007e29e03409f9398d074e158d920d36eb82eaf66fb1136b0c5374c"
+            ],
+            "version": "==2018.9"
+        },
+>>>>>>> [chore #164071554] Fix dependency typo on pipfile
         "six": {
             "hashes": [
                 "sha256:3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c",
@@ -137,5 +160,10 @@
             ],
             "version": "==1.2"
         }
+<<<<<<< HEAD
     }
+=======
+    },
+    "develop": {}
+>>>>>>> [chore #164071554] Fix dependency typo on pipfile
 }
