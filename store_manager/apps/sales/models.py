@@ -18,3 +18,15 @@ class Sale(TimeStamped):
     """This class defines a sale instance"""
     attendant = models.ForeignKey(settings.AUTH_USER_MODEL,
     on_delete=models.CASCADE)
+
+class Product():
+    pass
+
+class Sale():
+    pass
+
+class Category():
+    pass
+
+class SaleItem():
+    pass
