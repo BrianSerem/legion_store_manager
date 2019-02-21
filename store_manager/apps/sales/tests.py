@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.utils.text import slugify
 
-from .factories import CategoryFactory, ProductFactory
+from .factories import CategoryFactory, ProductFactory,  SaleItemFactory
 
 from .factories import (CategoryFactory, ProductFactory, SaleFactory,
                         SaleItemFactory, UserFactory)
@@ -61,3 +61,15 @@ class SaleModelTests(TestCase):
     def test_owner_can_add_attendant_to_sale(self):
         sale_test = SaleFactory.create(attendant=self._user)
         self.assertEqual(sale_test.attendant, self._user)
+
+class SaleItemModelTests(TestCase):
+
+    def setUp(self):
+        self._sale = SaleFactory.create()
+
+    def test_model_can_add_new_saleItem(self):
+        sale_item = SaleItemFactory.create(sale=self._sale)
+        self.assertEqual(sale_item.sale, self._sale)
+
+
+
