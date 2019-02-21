@@ -12,11 +12,6 @@ django-nose = "*"
 nose = "*"
 django = "*"
 djangorestframework = "*"
-<<<<<<< HEAD
-=======
-djangorestframework-simplejwt = "*"
-factoryboy = "*"
->>>>>>> [Chore ] Added sales app.
 
 [requires]
 python_version = "3.7"
