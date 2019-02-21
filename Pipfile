@@ -6,9 +6,12 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
+djangorestframework-simplejwt = "*"
+factory-boy = "*"
+django-nose = "*"
+nose = "*"
 django = "*"
 djangorestframework = "*"
-djangorestframework-simplejwt = "*"
 
 [requires]
 python_version = "3.7"
