@@ -1,9 +1,9 @@
 from django.test import TestCase
 from django.utils.text import slugify
 
-from .models import Category, Product
 from .factories import CategoryFactory, ProductFactory
 from .models import Product
+
 
 class CategoryModelTest(TestCase):
     def test_add_category(self):
