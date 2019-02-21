@@ -1,22 +1,9 @@
 from django.test import TestCase
 from django.utils.text import slugify
 
-from .models import Category, Product
 from .factories import CategoryFactory, ProductFactory
 from .models import Product
 
-class CategoryTestCase(TestCase):
-    def test_add_category(self):
-        category = CategoryFactory.create()
-        self.assertEqual(str(category), category.title)
-
-    def test_generating_slugs_from_title(self):
-        category = CategoryFactory.create()
-        self.assertEqual(category.slug, slugify(category.title))
-        category.title = "onother thing"
-        category.save()
-        self.assertNotEqual(category.slug, slugify(category.title))
-        
 
 class ProductModelTests(TestCase):
 
