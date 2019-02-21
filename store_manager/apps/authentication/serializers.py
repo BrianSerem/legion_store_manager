@@ -2,6 +2,7 @@ import re
 from django.contrib.auth import authenticate
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
+from .backends import generate_jwt_token
 
 
 from django.contrib.auth.tokens import default_token_generator
