@@ -1,7 +1,9 @@
 import jwt
 from rest_framework import status, generics
 from rest_framework.generics import RetrieveUpdateAPIView
-from rest_framework.permissions import AllowAny, IsAuthenticated
+from rest_framework.permissions import (
+    AllowAny, IsAuthenticatedOrReadOnly, IsAuthenticated
+)
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from django.conf import settings
@@ -71,6 +73,7 @@ class LoginAPIView(generics.GenericAPIView):
 class UserRetrieveUpdateAPIView(RetrieveUpdateAPIView):
     #permission_classes = (IsAuthenticated,)
     serializer_class = UserSerializer
+    
 
     def retrieve(self, request, *args, **kwargs):
 
@@ -95,8 +98,25 @@ class UserRetrieveUpdateAPIView(RetrieveUpdateAPIView):
 
 class UsersRetrieveApiView(generics.ListAPIView):
 
-    queryset = User.objects.all()
+    
     serializer_class = UserSerializer
+    permission_classes = (IsAuthenticated,)
+    queryset = User.objects.all()
+
+
+class SingleUserRetrieveApiView(generics.RetrieveAPIView):
+
+    serializer_class = UserSerializer
+    permission_classes = (IsAuthenticated,)
+    queryset = User.objects.all()
+
+class DeleteUserApiView(generics.DestroyAPIView):
+
+    serializer_class = UserSerializer
+    permission_classes = (IsAuthenticated,)
+    queryset = User.objects.all()
+
+
 
 
 

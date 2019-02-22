@@ -21,10 +21,7 @@ def generate_jwt_token(username):
 
 
 class JWTAuthentication(authentication.TokenAuthentication):
-    """
-    Authenticate a receives a token from 'Authorization' Header prepended by
-    the keyword 'Bearer'
-    """
+   
     keyword = 'Bearer'
 
     def authenticate_credentials(self, token):
@@ -39,4 +36,4 @@ class JWTAuthentication(authentication.TokenAuthentication):
         except jwt.exceptions.ExpiredSignatureError:
             raise exceptions.AuthenticationFailed('Expired Token.')
         except jwt.exceptions.InvalidTokenError:
-            raise exceptions.AuthenticationFailed('Invalid token')
+            raise exceptions.AuthenticationFailed('Invalid token you guys')
