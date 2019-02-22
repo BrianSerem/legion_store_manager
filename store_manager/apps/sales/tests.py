@@ -2,7 +2,7 @@ from django.test import TestCase
 from django.utils.text import slugify
 
 from .factories import CategoryFactory, ProductFactory
-from .models import Product
+from .models import Category, Product
 
 
 class CategoryModelTest(TestCase):
@@ -16,16 +16,6 @@ class CategoryModelTest(TestCase):
         the_category2 = CategoryFactory()
         self.assertEqual(len(Category.objects.all()),2)
 
-        category = CategoryFactory.create()
-        self.assertEqual(str(category), category.title)
-
-    def test_generating_slugs_from_title(self):
-        category = CategoryFactory.create()
-        self.assertEqual(category.slug, slugify(category.title))
-        category.title = "onother thing"
-        category.save()
-        self.assertNotEqual(category.slug, slugify(category.title))
-        
 
 class ProductModelTests(TestCase):
 

@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 LOCAL_APPS = [
+    'store_manager.apps.authentication',
     "store_manager.apps.sales",
 ]
 
@@ -40,12 +41,11 @@ DJANGO_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework',
-    'store_manager.apps.authentication',
-    'store_manager.apps.sales',
 ]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    'rest_framework',
+]
 
 INSTALLED_APPS = LOCAL_APPS + DJANGO_APPS + THIRD_PARTY_APPS
 
