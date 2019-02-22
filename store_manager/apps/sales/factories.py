@@ -1,10 +1,10 @@
-from factory import DjangoModelFactory, Faker
+import factory
 
 from .models import Category
 
-class CategoryFactory(DjangoModelFactory):
-    title = Faker('Detergent')
-    category_description = Faker('This category holds washing soaps')
+class CategoryFactory(factory.DjangoModelFactory):
+    title = factory.Faker('name')
+    description = factory.Faker('text')
 
     class Meta:
         model = Category

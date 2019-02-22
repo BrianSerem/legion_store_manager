@@ -4,9 +4,16 @@ from django.test import TestCase
 from .models import Category
 from .factories import CategoryFactory
 
-class CategoryTestCase(TestCase):
+class CategoryModelTest(TestCase):
     def test_add_category(self):
-        category2 = CategoryFactory.create()
-        self.assertEqual(category2.title,'Detergent')
+        the_category= CategoryFactory()
+        self.assertEqual(len(Category.objects.all()),1)
+        self.assertTrue(isinstance(the_category.title, str))
+        self.assertTrue(isinstance(the_category.description, str))
+        self.assertTrue(len(the_category.title)>1)
+        self.assertTrue(len(the_category.description)>1)
+        the_category2 = CategoryFactory()
+        self.assertEqual(len(Category.objects.all()),2)
+
 
         
