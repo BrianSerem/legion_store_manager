@@ -39,8 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+<<<<<<< HEAD
     'store_manager.apps.authentication'
     
+=======
+    'store_manager.apps.authentication',
+    'store_manager.apps.sales',
+>>>>>>> [Chore #164071465] Fix errors in test for catergory model.
 ]
 
 MIDDLEWARE = [
